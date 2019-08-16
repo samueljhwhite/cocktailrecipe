@@ -9,9 +9,11 @@ class CocktailCard extends React.Component {
         }
     }
 
+    // State management functions
     toggleCard = () => {
         this.setState({ expanded: !this.state.expanded });
     }
+
 
     render() {
         // Inline card view
@@ -36,6 +38,7 @@ class CocktailCard extends React.Component {
                 <div>
                     <div className='cocktailCard'>
                         <h3 onClick={this.toggleCard}>{this.props.name}</h3>
+                        <button onClick={this.toggleCard}>Show Less!</button>
                         {
                             this.props.ingredients.map((individualIngredient) => {
                                 return <IngredientSpan key={individualIngredient} ingredient={individualIngredient} />
@@ -51,23 +54,4 @@ class CocktailCard extends React.Component {
 
 }
 
-
-// function CocktailCard({name, method, ingredients, toggle}) {
-
-//     return (
-// <div>
-//     <div className='cocktailCard'>
-//         <h3 onClick={toggle}>{name}</h3>
-//         {
-//             ingredients.map((individualIngredient) => {
-//                 return <IngredientSpan key={individualIngredient} ingredient={individualIngredient}/>
-//             })
-//         }
-//     </div>
-// </div>
-//     );
-// }
-
 export default CocktailCard;
-
-// <p>{method}</p>

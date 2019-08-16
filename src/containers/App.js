@@ -11,11 +11,11 @@ class App extends React.Component {
     super()
     this.state = {
       cocktailDB: allCocktails,
-      searchfield: ''
+      searchfield: '',
     }
   }
 
-  // State mangmt
+  // State change functions
   updateSearchField = (e) => {
     this.setState({ searchfield: e.target.value });
   }
