@@ -1,6 +1,8 @@
 import React from 'react';
 import IngredientSpan from '../components/IngredientSpan';
 
+import './CocktailCard.css'
+
 class CocktailCard extends React.Component {
     constructor() {
         super()
@@ -12,6 +14,12 @@ class CocktailCard extends React.Component {
     // State management functions
     toggleCard = () => {
         this.setState({ expanded: !this.state.expanded });
+        
+        if (this.state.expanded === false) {
+            this.props.setActiveCocktail(this.props.name);
+        } else {
+            this.props.setActiveCocktail('');
+        }
     }
 
 
@@ -36,7 +44,7 @@ class CocktailCard extends React.Component {
         else {
             return (
                 <div>
-                    <div className='cocktailCard'>
+                    <div id={this.props.name} className='cocktailCard'>
                         <h3 onClick={this.toggleCard}>{this.props.name}</h3>
                         <button onClick={this.toggleCard}>Show Less!</button>
                         {
