@@ -7,7 +7,7 @@ function CardArea({ cocktails, setActiveCocktail }) {
             {
                 cocktails.map((drink) => {
                     return (
-                        <CocktailCard name={drink.name} method={drink.method} key={drink.id} ingredients={drink.ingredients} setActiveCocktail={setActiveCocktail}/>
+                        <CocktailCard name={drink.name} method={drink.method} key={drink.id} ingredients={drink.ingredients} image={drink.image} setActiveCocktail={setActiveCocktail}/>
                     );
                 })
             }
