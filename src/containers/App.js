@@ -5,6 +5,7 @@ import SearchField from '../components/SearchField.js';
 import CardArea from '../components/CardArea';
 
 import './App.css';
+import Logo from '../CDBlogo1x3.svg';
 
 class App extends React.Component {
   constructor() {
@@ -21,6 +22,7 @@ class App extends React.Component {
   }
 
   setActiveCocktail = (cocktail) => {
+    // needs to update the visible search field itself. 
     this.setState({ searchfield: cocktail });
   }
 
@@ -31,9 +33,10 @@ class App extends React.Component {
       return drink.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
     });
 
-    // render components
+    // render components - Logo should be own component with reset onClick
     return (
       <div>
+        <img src={Logo} width='105' height='35' alt='logo'/> 
         <h1>Cocktail Recipes</h1>
         <SearchField updateSearchField={this.updateSearchField} />
         <CardArea cocktails={cocktailResults} setActiveCocktail={this.setActiveCocktail}/>

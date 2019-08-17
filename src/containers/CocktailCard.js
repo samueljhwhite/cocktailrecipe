@@ -13,13 +13,14 @@ class CocktailCard extends React.Component {
 
     // State management functions
     toggleCard = () => {
-        this.setState({ expanded: !this.state.expanded });
-        
+        // setActiveCocktail function from App.js
         if (this.state.expanded === false) {
             this.props.setActiveCocktail(this.props.name);
         } else {
             this.props.setActiveCocktail('');
         }
+
+        this.setState({ expanded: !this.state.expanded });
     }
 
 
