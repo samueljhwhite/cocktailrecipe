@@ -3,9 +3,9 @@ import React from 'react';
 import allCocktails from '../allCocktails.js'; //needs to be replaced by actual DB
 import SearchField from '../components/SearchField.js';
 import CardArea from '../components/CardArea';
+import Logo from '../components/Logo';
 
 import './App.css';
-import Logo from '../CDBlogo1x3.svg';
 
 class App extends React.Component {
   constructor() {
@@ -36,10 +36,10 @@ class App extends React.Component {
     // render components - Logo should be own component with reset onClick
     return (
       <div>
-        <img src={Logo} width='105' height='35' alt='logo'/> 
-        <h1>Cocktail Recipes</h1>
+        <Logo /> 
+        <h1>cocktailDB.net</h1>
         <SearchField updateSearchField={this.updateSearchField} />
-        <CardArea cocktails={cocktailResults} setActiveCocktail={this.setActiveCocktail}/>
+        <CardArea cocktails={cocktailResults} setActiveCocktail={this.setActiveCocktail} />
       </div>
     );
 

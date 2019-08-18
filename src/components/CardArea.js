@@ -1,9 +1,10 @@
 import React from 'react';
 import CocktailCard from '../containers/CocktailCard';
+import './CardArea.css'
 
 function CardArea({ cocktails, setActiveCocktail }) {
     return (
-        <div>
+        <div className='cardArea'>
             {
                 cocktails.map((drink) => {
                     return (

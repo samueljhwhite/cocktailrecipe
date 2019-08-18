@@ -28,13 +28,18 @@ class CocktailCard extends React.Component {
         // Inline card view
         if (this.state.expanded === false) {
             return (
-                    <div className='cocktailCard' style={{backgroundImage: `url(${this.props.image})`}} >
-                        <h3 onClick={this.toggleCard}>{this.props.name}</h3>
-                        {
-                            this.props.ingredients.map((individualIngredient) => {
-                                return <IngredientSpan key={individualIngredient} ingredient={individualIngredient} />
-                            })
-                        }
+                    <div className='cocktailCard'>
+                        <div className='cocktailCardContent'>
+                            <img className='cardImg' src={this.props.image} alt='this.props.name'/>
+                            <div className='cocktailCardText'>
+                                <h3 onClick={this.toggleCard}>{this.props.name}</h3>
+                                {
+                                    this.props.ingredients.map((individualIngredient) => {
+                                        return <IngredientSpan key={individualIngredient} ingredient={individualIngredient} />
+                                    })
+                                }
+                            </div>
+                        </div>
                     </div>
             );
         }
@@ -42,7 +47,7 @@ class CocktailCard extends React.Component {
         // Expanded recipe view - needs a unique URL
         else {
             return (
-                    <div className='cocktailCard' style={{backgroundImage: `url(${this.props.image})`}} >
+                    <div className='cocktailCard'>
                         <h3 onClick={this.toggleCard}>{this.props.name}</h3>
                         <button onClick={this.toggleCard}>Show Less!</button>
                         {
