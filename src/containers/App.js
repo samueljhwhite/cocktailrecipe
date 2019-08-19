@@ -2,10 +2,10 @@ import React from 'react';
 
 import allCocktails from '../allCocktails.js'; //needs to be replaced by actual DB
 import SearchField from '../components/SearchField.js';
-import CardArea from '../components/CardArea';
+import PrimaryDisplay from '../components/PrimaryDisplay';
 import Logo from '../components/Logo';
 
-import './App.css';
+import '../style.css';
 
 class App extends React.Component {
   constructor() {
@@ -16,7 +16,6 @@ class App extends React.Component {
     }
   }
 
-  // State change functions
   updateSearchField = (e) => {
     this.setState({ searchfield: e.target.value });
   }
@@ -36,13 +35,12 @@ class App extends React.Component {
     // render components - Logo should be own component with reset onClick
     return (
       <div>
-        <Logo /> 
+        <Logo />
         <h1>cocktailDB.net</h1>
         <SearchField updateSearchField={this.updateSearchField} />
-        <CardArea cocktails={cocktailResults} setActiveCocktail={this.setActiveCocktail} />
+        <PrimaryDisplay cocktails={cocktailResults} setActiveCocktail={this.setActiveCocktail} />
       </div>
     );
-
   }
 
 }

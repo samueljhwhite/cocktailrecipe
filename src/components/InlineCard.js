@@ -1,9 +1,9 @@
 import React from 'react';
 import IngredientSpan from '../components/IngredientSpan';
-import '../containers/CocktailCard.css';
 
 function InlineCard({ image, name, ingredients, toggleCard }) {
     return (
+
         <div className='cocktailCard'>
             <div className='cocktailCardContent'>
                 <img className='cardImg' src={image} alt={image} />
@@ -17,6 +17,7 @@ function InlineCard({ image, name, ingredients, toggleCard }) {
                 </div>
             </div>
         </div>
+        
     )
 }
 

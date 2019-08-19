@@ -1,10 +1,8 @@
 import React from 'react';
 import InlineCard from '../components/InlineCard.js';
-import ExpandedCard from '../components/ExpandedCard.js'
+import ExpandedCard from '../components/ExpandedCard.js';
 
-import './CocktailCard.css'
-
-class CocktailCard extends React.Component {
+class CardGenerator extends React.Component {
     constructor() {
         super()
         this.state = {
@@ -14,7 +12,7 @@ class CocktailCard extends React.Component {
 
     toggleCard = () => {
         const { setActiveCocktail, name } = this.props;
-        
+
         if (this.state.expanded === false) {
             setActiveCocktail(name);
         } else {
@@ -35,9 +33,8 @@ class CocktailCard extends React.Component {
                 <ExpandedCard image={image} name={name} ingredients={ingredients} method={method} toggleCard={this.toggleCard} />
             );
         }
-
     }
 
 }
 
-export default CocktailCard;
+export default CardGenerator;

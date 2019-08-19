@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #272c38;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #008ABF;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #008ABF;
+  margin: 2px;
+  margin-bottom: 5px;
+}
+
+.navBar {
+  background-color: #1f232d;
+}
+
+.searchField {
+  width: 400px;
+  height: 40px;
+  background-color: #1f232d;
+  color: #f0f0f0;
+  border: 1px solid #008ABF;
+}
+
+.cocktailCard {
+    margin: 5px;
+    padding: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 400px;
+    background-color: #1f232d;
+    display: inline-block;
+}
+
+p {
+    margin: 5px;
+    padding-bottom: 10px;
+}
+
+.ingredientSpan {
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+.cardImg {
+    height: 50px;
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+.cocktailCardContent {
+    display: flex;
+    align-content: center;
+}
+
+.cocktailCardText {
+    text-align: center;
+    padding-left: 5px;
+    align-self: center;
+}
+
+.expandedCocktailCard {
+    margin: 5px;
+    padding: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 95%;
+    background-color: #1f232d;
+    display: inline-block;
+}
+
+.cardImgLarge {
+    width: 100;
+    height: 300;
+}

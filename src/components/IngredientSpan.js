@@ -2,7 +2,7 @@ import React from 'react';
 
 function IngredientSpan({ ingredient }) {
     return (
-            <span className='ingredientSpan'>{ingredient} </span>
+            <span className='ingredientSpan'>{ingredient}</span>
     )
 }
 
