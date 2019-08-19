@@ -1,5 +1,6 @@
 import React from 'react';
-import IngredientSpan from '../components/IngredientSpan';
+import InlineCard from '../components/InlineCard.js';
+import ExpandedCard from '../components/ExpandedCard.js'
 
 import './CocktailCard.css'
 
@@ -11,52 +12,27 @@ class CocktailCard extends React.Component {
         }
     }
 
-    // State management functions
     toggleCard = () => {
-        // setActiveCocktail function from App.js
+        const { setActiveCocktail, name } = this.props;
+        
         if (this.state.expanded === false) {
-            this.props.setActiveCocktail(this.props.name);
+            setActiveCocktail(name);
         } else {
-            this.props.setActiveCocktail('');
+            setActiveCocktail('');
         }
-
         this.setState({ expanded: !this.state.expanded });
     }
 
-
     render() {
-        // Inline card view
+        const { image, name, ingredients, method } = this.props;
+
         if (this.state.expanded === false) {
             return (
-                    <div className='cocktailCard'>
-                        <div className='cocktailCardContent'>
-                            <img className='cardImg' src={this.props.image} alt='this.props.name'/>
-                            <div className='cocktailCardText'>
-                                <h3 onClick={this.toggleCard}>{this.props.name}</h3>
-                                {
-                                    this.props.ingredients.map((individualIngredient) => {
-                                        return <IngredientSpan key={individualIngredient} ingredient={individualIngredient} />
-                                    })
-                                }
-                            </div>
-                        </div>
-                    </div>
+                <InlineCard image={image} name={name} ingredients={ingredients} toggleCard={this.toggleCard} />
             );
-        }
-
-        // Expanded recipe view - needs a unique URL
-        else {
+        } else {
             return (
-                    <div className='cocktailCard'>
-                        <h3 onClick={this.toggleCard}>{this.props.name}</h3>
-                        <button onClick={this.toggleCard}>Show Less!</button>
-                        {
-                            this.props.ingredients.map((individualIngredient) => {
-                                return <IngredientSpan key={individualIngredient} ingredient={individualIngredient} />
-                            })
-                        }
-                        <p>{this.props.method}</p>
-                    </div>
+                <ExpandedCard image={image} name={name} ingredients={ingredients} method={method} toggleCard={this.toggleCard} />
             );
         }
 

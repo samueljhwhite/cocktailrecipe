@@ -3,8 +3,9 @@
     padding: 10px;
     padding-bottom: 10px;
     text-align: center;
-    max-width: 300px;
+    width: 400px;
     background-color: #1f232d;
+    display: inline-block;
 }
 
 p {
