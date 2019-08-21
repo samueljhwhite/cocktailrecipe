@@ -1,12 +1,12 @@
 import React from 'react';
 import IngredientSpan from '../components/IngredientSpan';
 
-function InlineCard({ image, name, ingredients, toggleCard }) {
+function InlineCard({ image, name, ingredients, toggleCard, setActiveRecipe, id }) {
     return (
 
         <div className='cocktailCard'>
             <div className='cocktailCardContent'>
-                <img className='cardImg' src={image} alt={image} />
+                <img id={id} className='cardImg' src={image} alt={image} onClick={setActiveRecipe}/>
                 <div className='cocktailCardText'>
                     <h3 onClick={toggleCard}>{name}</h3>
                     {

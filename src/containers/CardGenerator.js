@@ -22,11 +22,11 @@ class CardGenerator extends React.Component {
     }
 
     render() {
-        const { image, name, ingredients, method } = this.props;
+        const { image, name, ingredients, method, setActiveRecipe, id } = this.props;
 
         if (this.state.expanded === false) {
             return (
-                <InlineCard image={image} name={name} ingredients={ingredients} toggleCard={this.toggleCard} />
+                <InlineCard image={image} name={name} ingredients={ingredients} toggleCard={this.toggleCard} setActiveRecipe={setActiveRecipe} id={id}/>
             );
         } else {
             return (
