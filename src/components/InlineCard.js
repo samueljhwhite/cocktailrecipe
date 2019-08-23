@@ -1,7 +1,7 @@
 import React from 'react';
 import IngredientSpan from '../components/IngredientSpan';
 
-function InlineCard({ image, name, ingredients, toggleCard, setActiveRecipe, id }) {
+function InlineCard({ image, name, primaryIngredient, toggleCard, setActiveRecipe, id }) {
     return (
 
         <div className='cocktailCard'>
@@ -9,11 +9,9 @@ function InlineCard({ image, name, ingredients, toggleCard, setActiveRecipe, id 
                 <img id={id} className='cardImg' src={image} alt={image} onClick={setActiveRecipe}/>
                 <div className='cocktailCardText'>
                     <h3 onClick={toggleCard}>{name}</h3>
-                    {
-                        ingredients.map((individualIngredient) => {
-                            return <IngredientSpan key={individualIngredient} ingredient={individualIngredient} />
-                        })
-                    }
+                    <h2>{primaryIngredient}</h2>
+                    <IngredientSpan primaryIngredient={primaryIngredient} />
+
                 </div>
             </div>
         </div>

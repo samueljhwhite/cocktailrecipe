@@ -1,8 +1,8 @@
 import React from 'react';
 
-function IngredientSpan({ ingredient }) {
+function IngredientSpan({ primaryIngredient }) {
     return (
-            <span className='ingredientSpan'>{ingredient}</span>
+            <span className='ingredientSpan'>{primaryIngredient}</span>
     )
 }
 

@@ -10,44 +10,45 @@ import ExpandedCard from './ExpandedCard';
 // OBJECTIVE !---!---! CLEAN CODE, AND DISTRIBUTE HEAVY LIFTING
 
 
-function PrimaryDisplay({ activeRecipeIDState, searchedCocktails, displayRecipe, setActiveRecipe, updateSearchField, resetSearchAndActiveID }) {
+function PrimaryDisplay({ activeRecipeIDState, selectedIngredientState, searchedCocktails, displayRecipe, displayIngredient, setActiveRecipe, updateSearchField, setActiveIngredient, resetSearchAndActiveID }) {
     if (activeRecipeIDState === '') {
         return (
             <div>
-                <SearchField updateSearchField={ updateSearchField } />
+                <SearchField updateSearchField={updateSearchField} setActiveIngredient={setActiveIngredient} />
                 <div className='primaryDisplay'>
-                        {
-                            searchedCocktails.map((drink) => {
-                                return (
-                                    <CardGenerator 
-                                        name={drink.name} 
-                                        method={drink.method} 
-                                        key={drink.id} 
-                                        id={drink.id} 
-                                        ingredients={drink.ingredients} 
-                                        image={drink.image} 
-                                        setActiveRecipe={setActiveRecipe} 
-                                    />
-                                );
-                            })
-                        }
+                    {
+                        searchedCocktails.map((drink) => {
+                            return (
+                                <CardGenerator
+                                    name={drink.name}
+                                    method={drink.method}
+                                    key={drink.id}
+                                    id={drink.id}
+                                    primaryIngredient={drink.primaryIngredient}
+                                    image={drink.image}
+                                    setActiveRecipe={setActiveRecipe}
+                                />
+                            );
+                        })
+                    }
                 </div>
             </div>
         );
     } else {
         return (
             <div>
-            <SearchField updateSearchField={ updateSearchField } />
-            <ExpandedCard 
-                image={displayRecipe.image} 
-                name={displayRecipe.name} 
-                ingredients={displayRecipe.ingredients} 
-                method={displayRecipe.method} 
-                resetSearchAndActiveID={ resetSearchAndActiveID }
-            />
+                <SearchField updateSearchField={updateSearchField} />
+                <ExpandedCard
+                    image={displayRecipe.image}
+                    name={displayRecipe.name}
+                    primaryIngredient={displayRecipe.primaryIngredient}
+                    method={displayRecipe.method}
+                    resetSearchAndActiveID={resetSearchAndActiveID}
+                />
             </div>
         );
     }
+
 }
 
 
@@ -64,11 +65,11 @@ function PrimaryDisplay({ activeRecipeIDState, searchedCocktails, displayRecipe,
 
 
 
-    
+
 
 //     render() {
 
-        
+
 //         const { searchedCocktails, setActiveCocktail, displayRecipe } = this.props;
 
 

@@ -15,7 +15,7 @@ import IngredientSpan from '../components/IngredientSpan';
 
 // 
 
-function ExpandedCard({ image, name, ingredients, method, resetSearchAndActiveID }) {
+function ExpandedCard({ image, name, primaryIngredient, method, resetSearchAndActiveID }) {
     return (
 
         <div className='expandedCocktailCard'>
@@ -24,13 +24,8 @@ function ExpandedCard({ image, name, ingredients, method, resetSearchAndActiveID
                 <div className='cocktailCardText'>
                     <h3>{name}</h3>
                     <button onClick={resetSearchAndActiveID}>Show Less!</button>
+                    <IngredientSpan primaryIngredient={primaryIngredient} />
 
-
-                    {
-                        ingredients.map((individualIngredient) => {
-                            return <IngredientSpan key={individualIngredient} ingredient={individualIngredient} />
-                        })
-                    }
                     <p>{method}</p>
                 </div>
             </div>

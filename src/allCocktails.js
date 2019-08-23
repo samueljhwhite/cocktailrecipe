@@ -4,42 +4,42 @@ const allCocktails = [
     {
         id: 1,
         name: 'Gin and Tonic',
-        ingredients:  ['gin', 'tonic', 'lime', 'ice'],
+        primaryIngredient:  'Gin',
         method: 'Add ice to a highball glass, pour 1 part gin and then 3 parts tonic.',
         image: ginAndTonic
     },
     {
         id: 2,
         name: 'Mojito',
-        ingredients:  ['white rum', 'soda', 'lime juice', 'granulated sugar', 'mint'],
+        primaryIngredient:  'Rum',
         method: 'Muddle the lime juice, sugar and mint leaves in a small jug, crushing the mint as you go – you can use the end of a rolling pin for this. Pour into a tall glass and add a handful of ice. Pour over the rum, stirring with a long-handled spoon. Top up with soda water, garnish with mint and serve.',
         image: ginAndTonic
     },
     {
         id: 3,
         name: 'Screwdriver',
-        ingredients:  ['vodka', 'orange juice'],
+        primaryIngredient:  'Vodka',
         method: 'Add ice to a highball glass, pour 1 part vodka and then 3 parts orange juice.',
         image: ginAndTonic
     },
     {
         id: 4,
         name: 'A sickingly prodigous',
-        ingredients: ['sickingly', 'prodigousnt'],
+        primaryIngredient: 'sickingly',
         method: 'A sickingly prodigous profile takes the world for granted.',
         image: ginAndTonic
     },
     {
         id: 5,
         name: 'Passionate ',
-        ingredients: ['evening', 'still', 'very', 'coherent'],
+        primaryIngredient: 'evening',
         method: 'A token of gratitude is often one floor above you. A token of gratitude would die for a grapefruit! Trickery is ever present. A caring mother revels in authority.',
         image: ginAndTonic
     },
     {
         id: 6,
         name: 'Inspiration is a constant.',
-        ingredients: ['ennobling', 'Entity', 'Throughout', 'complexity'],
+        primaryIngredient: 'ennobling',
         method: 'Shiva will remove the barriers to angelic stardust. The metamorphosis of transformation is now happening worldwide. We are being called to explore the galaxy itself as an interface between insight and sharing.',
         image: ginAndTonic
     }

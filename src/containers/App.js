@@ -12,7 +12,8 @@ class App extends React.Component {
     this.state = {
       cocktailDB: allCocktailsImport, // Static, does not change
       searchfield: '', // Updated based on user input into searchfield
-      activeRecipeID: '' // Toggled, based on clicked Card item
+      activeRecipeID: '', // Set based on clicked Card item
+      selectedIngredient: '' //Selected from button
     }
   }
 
@@ -25,33 +26,53 @@ class App extends React.Component {
     this.setState({ activeRecipeID: e.target.id });
   }
 
+  setActiveIngredient = (e) => {
+    this.setState({ selectedIngredient: e.target.id });
+  }
+
   resetSearchAndActiveID = () => {
     this.setState({ searchfield: '' });
     this.setState({ activeRecipeID: '' });
+    this.setState({ selectedIngredient: '' });
   }
 
 
   render() {
-    // cocktailDB filtered by searchfield
-    const searchedCocktails = this.state.cocktailDB.filter(drink => {
-      return drink.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+    
+    const { cocktailDB, activeRecipeID, selectedIngredient, searchfield } = this.state;
+
+    // cocktailDB filtered against searchfield
+    const searchedCocktails = cocktailDB.filter(drink => {
+      return drink.name.toLowerCase().includes(searchfield.toLowerCase());
     });
 
-    // cocktailDB filtered by activeRecipeID
-    const displayRecipe = this.state.cocktailDB.filter(drink => {
-      return drink.id === Number(this.state.activeRecipeID);
+    // cocktailDB filtered against activeRecipeID
+    const displayRecipe = cocktailDB.filter(drink => {
+      return drink.id === Number(activeRecipeID);
     });
+
+    // cocktailDB filtered against selectedIngredient
+    const displayIngredient = cocktailDB.filter(drink => {
+      return drink.primaryIngredient.toLowerCase().includes(selectedIngredient.toLowerCase());
+    });
+
+
 
     return (
       <div>
         <Logo resetSearchAndActiveID={ this.resetSearchAndActiveID } />
         
+        { console.log(displayIngredient) }
+        
         <PrimaryDisplay 
-          activeRecipeIDState={ this.state.activeRecipeID }
+          activeRecipeIDState={ activeRecipeID }
+          selectedIngredientState={ selectedIngredient }
           searchedCocktails={ searchedCocktails } 
           displayRecipe={ displayRecipe[0] } 
+          displayIngredient={ displayIngredient } 
           setActiveRecipe={ this.setActiveRecipe }
           updateSearchField={ this.updateSearchField } 
+          setActiveIngredient={ this.setActiveIngredient } 
           resetSearchAndActiveID={ this.resetSearchAndActiveID }
         />
 
