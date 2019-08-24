@@ -18,19 +18,21 @@ class App extends React.Component {
   }
 
   updateSearchField = (e) => {
-    this.setState({ activeRecipeID: '' });
+    this.resetState();
     this.setState({ searchfield: e.target.value });
   }
 
   setActiveRecipe = (e) => {
+    this.resetState();
     this.setState({ activeRecipeID: e.target.id });
   }
 
   setActiveIngredient = (e) => {
+    this.resetState();
     this.setState({ selectedIngredient: e.target.id });
   }
 
-  resetSearchAndActiveID = () => {
+  resetState = () => {
     this.setState({ searchfield: '' });
     this.setState({ activeRecipeID: '' });
     this.setState({ selectedIngredient: '' });
@@ -38,7 +40,6 @@ class App extends React.Component {
 
 
   render() {
-    
     const { cocktailDB, activeRecipeID, selectedIngredient, searchfield } = this.state;
 
     // cocktailDB filtered against searchfield
@@ -56,14 +57,9 @@ class App extends React.Component {
       return drink.primaryIngredient.toLowerCase().includes(selectedIngredient.toLowerCase());
     });
 
-
-
     return (
       <div>
-        <Logo resetSearchAndActiveID={ this.resetSearchAndActiveID } />
-        
-        { console.log(displayIngredient) }
-        
+        <Logo resetState={ this.resetState } />
         <PrimaryDisplay 
           activeRecipeIDState={ activeRecipeID }
           selectedIngredientState={ selectedIngredient }
@@ -73,12 +69,12 @@ class App extends React.Component {
           setActiveRecipe={ this.setActiveRecipe }
           updateSearchField={ this.updateSearchField } 
           setActiveIngredient={ this.setActiveIngredient } 
-          resetSearchAndActiveID={ this.resetSearchAndActiveID }
+          resetState={ this.resetState }
         />
-
         <div>Pretend Footer</div>
       </div>
     );
+
   }
 
 

@@ -1,0 +1,22 @@
+import React from 'react';
+import InlineCard from './InlineCard';
+
+function InlineCardGenerator({ cardsToDisplay, setActiveRecipe }) {
+    return (
+        cardsToDisplay.map((drink) => {
+            return (
+                <InlineCard
+                    name={drink.name}
+                    method={drink.method}
+                    key={drink.id}
+                    id={drink.id}
+                    primaryIngredient={drink.primaryIngredient}
+                    image={drink.image}
+                    setActiveRecipe={setActiveRecipe}
+                />
+            );
+        })
+    )
+}
+
+export default InlineCardGenerator;

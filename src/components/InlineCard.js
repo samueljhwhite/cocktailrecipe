@@ -9,7 +9,6 @@ function InlineCard({ image, name, primaryIngredient, toggleCard, setActiveRecip
                 <img id={id} className='cardImg' src={image} alt={image} onClick={setActiveRecipe}/>
                 <div className='cocktailCardText'>
                     <h3 onClick={toggleCard}>{name}</h3>
-                    <h2>{primaryIngredient}</h2>
                     <IngredientSpan primaryIngredient={primaryIngredient} />
 
                 </div>
