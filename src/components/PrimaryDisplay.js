@@ -3,9 +3,12 @@ import SearchField from '../components/SearchField.js';
 import ExpandedCard from './ExpandedCard';
 import InlineCardGenerator from './InlineCardGenerator.js';
 
-// Could take props as argument, and destructure for clarity?
-
-function PrimaryDisplay({ activeRecipeIDState, selectedIngredientState, searchedCocktails, displayRecipe, displayIngredient, setActiveRecipe, updateSearchField, setActiveIngredient, resetState }) {
+function PrimaryDisplay(props) {
+    
+    const { activeRecipeIDState, selectedIngredientState } = props; //State
+    const { resetState, setActiveRecipe, updateSearchField, setActiveIngredient } = props; // Functions
+    const { searchedCocktails, displayRecipe, displayIngredient } = props; // Variables
+    
     if (activeRecipeIDState === '' && selectedIngredientState === '') {
         return (
             <div>
