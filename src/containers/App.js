@@ -3,8 +3,10 @@ import React from 'react';
 import allCocktailsImport from '../allCocktails.js'; //needs to be replaced by actual DB
 import PrimaryDisplay from '../components/PrimaryDisplay';
 import Logo from '../components/Logo';
+import Footer from '../components/Footer.js'
 
-import '../style.css';
+// import '../style.css';
+import '../App.css';
 
 class App extends React.Component {
   constructor() {
@@ -71,7 +73,7 @@ class App extends React.Component {
           setActiveIngredient={ this.setActiveIngredient } 
           resetState={ this.resetState }
         />
-        <div>Pretend Footer</div>
+        <Footer />
       </div>
     );
 

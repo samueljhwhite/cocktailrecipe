@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+.header {
+    background-color: #1f232d;
+    margin-bottom: 20px;
+    padding: 12px;
+    padding-left: 20px;
+}
+
+.footer {
+    background-color: #1f232d;
+    margin: 20;
+    margin-top: 50px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    padding: 50px;
+}
+
+.primaryDisplay {
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-start; */
+    align-content: space-evenly;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.searchField {
+    order: 1;
+    background-color: #1f232d;
+    border: none;
+    margin-bottom: 25px;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #f0f0f0;
+    height: 30px;
+}
+
+.ingredientButtons {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: #21252f;
+    color: #f0f0f0;
+    border: none;
+    margin-bottom: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 15px;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cardArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* justify-content: flex-start; */
+    align-content: flex-start;
+    align-content: space-between;
+    margin: 10px;
+}
+
+.cocktailCard {
+    background-color: #1f232d;
+    text-align: center;
+    margin: 5px;
+    margin-bottom: 25px;
+}
+
+.cocktailCardContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardImg {
+    height: 150px;
+    width: 300px;
+}
+
+.cocktailCardText {
+    padding: 20px;
+}
+
+.expandedCocktailCard {
+    margin: 30px;
+    background-color: #1f232d;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #272c38;
+    font-family: 'Roboto', sans-serif;
+    color: #f0f0f0;
+    height: 100%;
+    min-height: 100%;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #008ABF;
+    margin: 2px;
+    margin-bottom: 5px;
+}
