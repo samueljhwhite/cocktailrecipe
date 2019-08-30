@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #272c38;
+    font-family: 'Roboto', sans-serif;
+    color: #f0f0f0;
+    height: 100%;
+    min-height: 100%;
+}
+
+h3 {
+    font-family: 'Roboto Thin', sans-serif;
+    color: #008ABF;
+    margin: 2px;
+    margin-bottom: 5px;
+}
 
 .header {
     background-color: #1f232d;
@@ -11,7 +28,7 @@
 .footer {
     background-color: #1f232d;
     margin: 20;
-    margin-top: 50px;
+    margin-top: 100px;
     padding-top: 50px;
     text-align: center;
 }
@@ -61,7 +78,7 @@ button {
     padding-left: 15px;
     text-align: left;
     font-size: 14px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .cardArea {
@@ -98,21 +115,4 @@ button {
 .expandedCocktailCard {
     margin: 30px;
     background-color: #1f232d;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #272c38;
-    font-family: 'Roboto', sans-serif;
-    color: #f0f0f0;
-    height: 100%;
-    min-height: 100%;
-}
-
-h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #008ABF;
-    margin: 2px;
-    margin-bottom: 5px;
 }

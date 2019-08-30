@@ -19,4 +19,3 @@ function InlineCard({ image, name, primaryIngredient, toggleCard, setActiveRecip
 }
 
 export default InlineCard;
-

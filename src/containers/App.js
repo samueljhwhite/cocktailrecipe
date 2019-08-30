@@ -61,7 +61,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <Logo resetState={ this.resetState } />
+        <Logo resetState={ this.resetState } /> 
         <PrimaryDisplay 
           activeRecipeIDState={ activeRecipeID }
           selectedIngredientState={ selectedIngredient }
