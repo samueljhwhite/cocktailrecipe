@@ -1,8 +1,9 @@
 import React from 'react';
 
 import allCocktailsImport from '../allCocktails.js'; //needs to be replaced by actual DB
-import PrimaryDisplay from '../components/PrimaryDisplay';
-import Logo from '../components/Logo';
+import PrimaryDisplay from '../components/PrimaryDisplay.js';
+// import Logo from '../components/Logo';
+import NavBar from '../components/NavBar.js'
 import Footer from '../components/Footer.js'
 
 // import '../style.css';
@@ -34,6 +35,11 @@ class App extends React.Component {
     this.setState({ selectedIngredient: e.target.id });
   }
 
+  setActiveIngredientNAV = (e) => {
+    this.resetState();
+    this.setState({ selectedIngredient: e.target.value.toLowerCase()})
+  }
+
   resetState = () => {
     this.setState({ searchfield: '' });
     this.setState({ activeRecipeID: '' });
@@ -61,7 +67,11 @@ class App extends React.Component {
 
     return (
       <div>
-        <Logo resetState={ this.resetState } /> 
+        <NavBar 
+          resetState={this.resetState} 
+          updateSearchField={this.updateSearchField} 
+          setActiveIngredientNAV={this.setActiveIngredientNAV} 
+        />
         <PrimaryDisplay 
           activeRecipeIDState={ activeRecipeID }
           selectedIngredientState={ selectedIngredient }
@@ -83,3 +93,5 @@ class App extends React.Component {
 }
 
 export default App;
+
+// <Logo resetState={ this.resetState } /> 

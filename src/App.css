@@ -147,3 +147,24 @@ li {
     font-size: 14px;
     margin: 8px;
 }
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    width: 100%;
+    background-color: #1f232d;
+    margin-bottom: 20px;
+    padding: 12px;
+    padding-left: 20px;
+}
+
+.mobileNav {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+}
+
+.mobileNav > input {
+    width: 2000px;
+}
