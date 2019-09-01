@@ -1,21 +1,26 @@
 import React from 'react';
-import IngredientSpan from '../components/IngredientSpan';
+import ListGenerator from './ListGenerator.js';
 
 
-function ExpandedCard({ displayRecipe, resetState }) {
-    const { image, name, primaryIngredient, method } = displayRecipe;
+function ExpandedCard({displayRecipe}) {
+    const { image, name, equipment, ingredients,howToMix } = displayRecipe;
 
     return (
         <div className='expandedCocktailCard'>
-            <div className='cocktailCardContent'>
+            <div className='expandedCardImg'>
                 <img className='cardImgLarge' src={image} alt={image} />
-                <div className='cocktailCardText'>
-                    <h3>{name}</h3>
-                    <button onClick={resetState}>Show Less!</button>
-                    <IngredientSpan primaryIngredient={primaryIngredient} />
-
-                    <p>{method}</p>
-                </div>
+            </div>
+            <div className='cocktailRecipe'>
+                <h3>{name}</h3>
+                
+                <h3>Equiment</h3>
+                <ListGenerator list={equipment} />
+                
+                <h3>Ingredients</h3>
+                <ListGenerator list={ingredients} />
+                
+                <h3>How to Mix</h3>
+                <ListGenerator list={howToMix} />
             </div>
         </div>
     );

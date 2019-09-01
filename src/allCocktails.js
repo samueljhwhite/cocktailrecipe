@@ -7,7 +7,10 @@ const allCocktails = [
         name: 'Gin and Tonic',
         primaryIngredient:  'Gin',
         method: 'Add ice to a highball glass, pour 1 part gin and then 3 parts tonic.',
-        image: placeholder
+        image: placeholder,
+        equipment: ['Bar spoon', 'Glass'],
+        ingredients: ['1 part Bombay Sapphire gin', '2 parts Premium Tonic Water', 'To garnish: Lime or lemon wedge'],
+        howToMix: ['Add the ice to your glass and squeeze in the juice of a lime wedge. Run the lime wedge around the rim of the glass', 'Add the gin and tonic', 'Stir gently']
     },
     {
         id: 2,
