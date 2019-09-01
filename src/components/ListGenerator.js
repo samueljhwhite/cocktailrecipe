@@ -3,7 +3,7 @@ import ListItem from './ListItem.js';
 
 function ListGenerator({list}) {
     return (
-            <ul className='list'>
+            <ul>
                 {
                     list.map((listItem, i) => {
                         return (

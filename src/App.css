@@ -11,11 +11,17 @@ body {
     min-height: 100%;
 }
 
-h3 {
+h1, h3 {
     font-family: 'Roboto Thin', sans-serif;
     color: #008ABF;
     margin: 2px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-family: 'Roboto Thin', sans-serif;
+    color: #008ABF;
+    margin: 10px;
 }
 
 .header {
@@ -41,14 +47,17 @@ h3 {
 .primaryDisplay {
     display: flex;
     flex-direction: row;
-    /* align-items: flex-start; */
     align-content: space-evenly;
+    width: 100%;
+    max-width: 99%;
+    margin: 0 auto;
 }
 
 .navigation {
     display: flex;
     flex-direction: column;
     margin: 10px;
+    /* flex-wrap: wrap; */
 }
 
 .searchField {
@@ -66,6 +75,7 @@ h3 {
     order: 2;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 button {
@@ -85,7 +95,6 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* justify-content: flex-start; */
     align-content: flex-start;
     align-content: space-between;
     margin: 10px;
@@ -94,7 +103,7 @@ button {
 .cocktailCard {
     background-color: #1f232d;
     text-align: center;
-    margin: 5px;
+    margin: 10px;
     margin-bottom: 25px;
 }
 
@@ -113,6 +122,29 @@ button {
 }
 
 .expandedCocktailCard {
-    margin: 30px;
+    width: 88%;
     background-color: #1f232d;
+    display: flex;
+    align-content: flex-start;
+    align-content: space-between;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+.expandedCardImg {
+    margin: 15px;
+    padding: 10px;
+    order: 1;
+}
+
+.cocktailRecipe {
+    margin: 15px;
+    padding: 10px;
+    order: 2;
+    max-width: 900px;
+}
+
+li {
+    font-size: 14px;
+    margin: 8px;
 }
