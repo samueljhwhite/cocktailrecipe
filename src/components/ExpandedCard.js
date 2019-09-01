@@ -3,8 +3,7 @@ import ListGenerator from './ListGenerator.js';
 
 
 function ExpandedCard({displayRecipe}) {
-    const { image, name, equipment, ingredients, recipe } = displayRecipe;
-    const { largeImg } = displayRecipe;
+    const { largeImg, name, equipment, ingredients, recipe } = displayRecipe;
 
     return (
         <div className='expandedCocktailCard'>
