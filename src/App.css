@@ -104,7 +104,7 @@ button {
 .cardArea {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-content: flex-start;
     align-content: space-between;
     margin: 10px;
@@ -142,16 +142,27 @@ button {
 }
 
 .expandedCardImg {
-    margin: 15px;
-    padding: 10px;
     order: 1;
+    /* max-width: 30%; */
+}
+
+.expandedCardImg img {
+    margin: 5px;
+    padding: 5px;
+    order: 1;
+    max-width: 90%;
+    height: auto;
+    min-width: 40%;
 }
 
 .cocktailRecipe {
-    margin: 15px;
     padding: 10px;
     order: 2;
-    max-width: 900px;
+    max-width: 600px;
+}
+
+ul {
+
 }
 
 li {
