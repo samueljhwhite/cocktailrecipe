@@ -135,8 +135,8 @@ button {
     width: 88%;
     background-color: #1f232d;
     display: flex;
-    align-content: flex-start;
-    align-content: space-between;
+    /* align-content: space-around; */
+    /* align-content: space-between; */
     margin: 10px;
     flex-wrap: wrap;
 }
@@ -148,21 +148,18 @@ button {
 
 .expandedCardImg img {
     margin: 5px;
-    padding: 5px;
     order: 1;
     max-width: 90%;
     height: auto;
-    min-width: 40%;
+    min-width: 30%;
+    padding-left: 1.1em;
+    margin-top: 1.2em;
 }
 
 .cocktailRecipe {
     padding: 10px;
     order: 2;
-    max-width: 600px;
-}
-
-ul {
-
+    max-width: 800px;
 }
 
 li {
