@@ -3,7 +3,7 @@ import React from 'react';
 function IngredientOptions({setActiveIngredientNAV}) {
     return (
         <select placeholder='Test' onChange={setActiveIngredientNAV} className='ingredientOptions'>
-            <option value=''>Select Liquor</option>
+            <option value=''>Liquor</option>
             <option>Absinthe</option>
             <option>Beer</option>
             <option>Bitters</option>
