@@ -59,6 +59,12 @@ h4 {
     /* flex-wrap: wrap; */
 }
 
+@media (max-width: 880px) {
+    .navigation {
+        display: none;
+    }
+}
+
 .searchField {
     order: 1;
     background-color: #1f232d;
@@ -163,6 +169,12 @@ li {
     display: flex;
     flex-direction: row;
     align-content: flex-end;
+}
+
+@media (min-width: 880px) {
+    .mobileNav {
+        display: none;
+    }
 }
 
 .mobileNav > input {
