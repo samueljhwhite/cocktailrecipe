@@ -2,11 +2,9 @@ import React from 'react';
 
 import allCocktailsImport from '../allCocktails.js'; //needs to be replaced by actual DB
 import PrimaryDisplay from '../components/PrimaryDisplay.js';
-// import Logo from '../components/Logo';
 import NavBar from '../components/NavBar.js'
 import Footer from '../components/Footer.js'
 
-// import '../style.css';
 import '../App.css';
 
 class App extends React.Component {
