@@ -1,14 +1,23 @@
 // import ginAndTonic from './images/ginandtonic.jpg';
 import placeholder from './images/placeholder 4 150 300.jpg';
-import mojitoLarge from './images/mojitoLarge.jpg';
+import ginAndTonicSmall from './images/ginAndTonicSmall.jpg';
 import ginAndTonicLarge from './images/ginAndTonicLarge.jpg';
+import mojitoSmall from './images/mojitoSmall.jpg';
+import mojitoLarge from './images/mojitoLarge.jpg';
+import pinaColadaSmall from './images/pinaColadaSmall.jpg';
+
+import margaritaSmall from './images/margaritaSmall.jpg';
+
+import whiskySourSmall from './images/whiskySourSmall.jpg';
+
+import americanaSmall from './images/americanaSmall.jpg';
 
 const allCocktails = [
     {
         id: 1,
         name: 'Gin and Tonic',
         primaryIngredient:  'Gin',
-        image: placeholder,
+        image: ginAndTonicSmall,
         equipment: ['Spoon', 'Glass'],
         ingredients: ['1 part Bombay Sapphire gin', '2 parts Premium Tonic Water', 'To garnish: Lime or lemon wedge'],
         recipe: ['Add the ice to your glass and squeeze in the juice of a lime wedge. Run the lime wedge around the rim of the glass', 'Add the gin and tonic', 'Stir gently'],
@@ -18,7 +27,7 @@ const allCocktails = [
         id: 2,
         name: 'Mojito',
         primaryIngredient:  'Rum',
-        image: placeholder,
+        image: mojitoSmall,
         equipment: ['A muddler (or a rolling pin)', 'Spoon', 'Long glass'],
         ingredients: ['2 parts Bacardi Carta Blanca', 'Half of a fresh lime', 'Fresh mint leaves', '2 heaped spoons of caster sugar', 'A dash of soda water', 'Cubed ice', 'Crushed ice', 'To Garnish: Sprig of fresh mint'],
         recipe: ['Put the four lime wedges into a glass, then add the sugar and muddle (squish everything together) to release the lime juice', 'Put the mint leaves on one hand and clap. This bruises the leaves and releases the aroma. Rub the mint leaves around the rim of the glass and drop them in. Use a muddler, bar spoon (or even a rolling pin) to gently push the mint down into the lime juice', 'Half fill the glass with crushed ice and pour in the Bacardi Carta Blanca. Stir the mix together until the sugar dissolves', 'Top up with crushed ice, a splash of the soda water and garnish it with a sprig of mint'],
@@ -28,7 +37,7 @@ const allCocktails = [
         id: 3,
         name: 'Pina Colada',
         primaryIngredient:  'Rum',
-        image: placeholder,
+        image: pinaColadaSmall,
         equipment: ['Sling glass', 'Cocktail shaker', 'Blender'],
         ingredients: ['6-7 chunks of pineapple', '1 teaspoon of sugar', '1 tablespoon of coconut cream', '50ml Bacardi Carta Blanco', '50ml fresh pineapple juice', 'Ice', 'To Garnish: A pineapple triangle'],
         recipe: ['Place all your ingredients into the blender (apart from the garnish!) and blend until a smooth consistency', 'Pour into a chilled (or even better, frozen) glass, then add your garnish and serve'],
@@ -38,7 +47,7 @@ const allCocktails = [
         id: 4,
         name: 'Margarita',
         primaryIngredient: 'Tequila',
-        image: placeholder,
+        image: margaritaSmall,
         equipment: ['A shaker', 'A strainer', 'A sieve', 'Cocktail glass'],
         ingredients: ['1 part Cazadores Tequila', '½ part triple sec liqueur', '½ part lime juice', '1 lime wedge', 'Salt', 'Cubed ice'],
         recipe: ['Chill your glass (the easiest way is to fill it with ice)', 'Put lots of ice and all of the ingredients into a shaker, then shake hard for about 30 seconds to chill the liquid really well', 'Run a lime wedge around the outside of the rim of your glass before rolling the rim in salt', 'Double strain the mix into the glass'],
@@ -48,7 +57,7 @@ const allCocktails = [
         id: 5,
         name: 'Whiskey Sour',
         primaryIngredient: 'Bourbon Whisky',
-        image: placeholder,
+        image: whiskySourSmall,
         equipment: ['A shaker', 'A strainer', 'Short glass'],
         ingredients: ['2 parts bourbon', '1 part lemon juice', '½ part sugar syrup', '½ part egg white', 'Cubed ice', 'To garnish: 1 cherry and an orange slice'],
         recipe: ['Put ice and all of the ingredients into a shaker and shake hard for about 20 seconds to chill the liquid really well', 'Strain the mix into a glass filled with ice and garnish with the cherry and orange slice'],
@@ -128,7 +137,7 @@ const allCocktails = [
         id: 13,
         name: 'Americana',
         primaryIngredient: 'Prosecco White Wine & Bitters',
-        image: placeholder,
+        image: americanaSmall,
         equipment: ['Champagne saucer'],
         ingredients: ['⅓ part bourbon', '1 teaspoon maple syrup', '1 dash bitters', '1 part Martini Prosecco'],
         recipe: ['Add the bourbon, maple syrup and Martini Bitters to a cocktail glass. Carefully top the glass with chilled Martini Prosecco. Garnish with a cherry.'],
@@ -142,16 +151,6 @@ const allCocktails = [
         equipment: ['A shaker or stirring glass', 'A bar spoon (or teaspoon)', 'A strainer', 'A match', 'Martini glass'],
         ingredients: ['1 ½ parts orange vodka', '½ part Cointreau liqueur', '1 part cranberry juice', '¼ part fresh lime juice', 'Cubed ice', 'To garnish: orange zest'],
         recipe: ['Chill your cocktail glass (the easiest way is to fill it with ice)', 'Put plenty of ice and all of the ingredients into your shaker or stirring glass and shake or stir vigorously for about 20 seconds', 'Strain the mix into a cocktail glass', 'Cut a piece of orange peel about the size of your thumb (be careful not to bend it). Hold the piece of orange peel between finger and thumb over the glass, and use a match to gently warm it for about 20 seconds', 'Then bend the peel so it releases oil onto the lighted match, igniting a flame that will settle on the surface of the drink'],
-        largeImg: mojitoLarge
-    },
-    {
-        id: 15,
-        name: 'Margarita',
-        primaryIngredient: 'Tequila',
-        image: placeholder,
-        equipment: ['A shaker', 'A strainer', 'A sieve', 'Cocktail glass'],
-        ingredients: ['1 part Cazadores Tequila', '½ part triple sec liqueur', '½ part lime juice', '1 lime wedge', 'Salt', 'Cubed ice'],
-        recipe: ['Chill your glass (the easiest way is to fill it with ice)', 'Put lots of ice and all of the ingredients into a shaker, then shake hard for about 30 seconds to chill the liquid really well', 'Run a lime wedge around the outside of the rim of your glass before rolling the rim in salt', 'Double strain the mix into the glass'],
         largeImg: mojitoLarge
     }
 ];
