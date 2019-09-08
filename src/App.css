@@ -27,16 +27,17 @@ h4 {
 .header {
     background-color: #1f232d;
     margin-bottom: 11px;
-    /* margin-left: 10px; */
     padding-bottom: 12px;
     padding-top:12px;
 }
 
 .footer {
     background-color: #1f232d;
+    margin: 0;
     margin-top: 250px;
     padding-top: 50px;
     text-align: center;
+    width: 100%;
 }
 
 .footer p {
@@ -49,7 +50,7 @@ h4 {
     flex-direction: row;
     align-content: space-evenly;
     width: 100%;
-    max-width: 99%;
+    max-width: 1900px;
     margin: 0 auto;
     min-height: 500px;
 }
@@ -172,7 +173,6 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     background-color: #1f232d;
     margin-bottom: 20px;
     padding: 8px;
@@ -203,6 +203,5 @@ select {
     height: 30px;
     border: 1px solid #008ABF;
     margin-left: 10px;
-    /* margin-right: 10px; */
     max-width: 30%;
 }

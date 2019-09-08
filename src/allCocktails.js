@@ -1,5 +1,3 @@
-// import ginAndTonic from './images/ginandtonic.jpg';
-import placeholder from './images/placeholder 4 150 300.jpg';
 import ginAndTonicSmall from './images/ginAndTonicSmall.jpg';
 import ginAndTonicLarge from './images/ginAndTonicLarge.jpg';
 import mojitoSmall from './images/mojitoSmall.jpg';
@@ -10,7 +8,23 @@ import margaritaSmall from './images/margaritaSmall.jpg';
 
 import whiskySourSmall from './images/whiskySourSmall.jpg';
 
+import hotToddySmall from './images/hotToddySmall.jpg';
+
+import treacleCocktailSmall from './images/treacleCocktailSmall.jpg';
+
+import proseccoCocktailSmall from './images/proseccoCocktailSmall.jpg';
+
+import maryPitchforkSmall from './images/maryPitchforkSmall.jpg';
+
+import vanillaPearDrop from './images/vanillaPearDrop.jpg';
+
+import bloodOrangeMimosa from './images/bloodOrangeMimosa.jpg';
+
+import rossiniSmall from './images/rossiniSmall.jpg';
+
 import americanaSmall from './images/americanaSmall.jpg';
+
+import cosmopolitanSmall from './images/cosmopolitanSmall.jpg';
 
 const allCocktails = [
     {
@@ -67,7 +81,7 @@ const allCocktails = [
         id: 6,
         name: 'Hot Toddy',
         primaryIngredient: 'Whisky',
-        image: placeholder,
+        image: hotToddySmall,
         equipment: ['A short glass'],
         ingredients: ['1 ½ parts Whisky', '1/3 part honey syrup', '3 parts hot water', '3 dried cloves, per glass', 'freshly squeezed lemon juice, plus a slice of lemon to garnish each glass', 'cinnamon stic​ks, to garnish each glass'],
         recipe: ['Combine the whisky, honey syrup, hot water and cloves in a toddy glass and stir gently until completely combined. Squeeze in lemon juice, to taste. Remove the cloves, then garnish with a slice of lemon and cinnamon stick.'],
@@ -77,7 +91,7 @@ const allCocktails = [
         id: 7,
         name: 'Treacle Cocktail',
         primaryIngredient: 'Rum',
-        image: placeholder,
+        image: treacleCocktailSmall,
         equipment: ['A short glass'],
         ingredients: ['Teaspoon of sugar syrup (mix 2 parts sugar to 1 part water)', '3 dashes orange bitters', '2 parts Bacardi 8 Year Old Rum', '1 part cloudy apple juice', 'Orange twist, to garnish'],
         recipe: ['Put the sugar syrup and bitters into a rocks glass. Add 2 cubes of ice and about 10ml of the Bacardi 8. Stir well. Add more ice and the remainder of the rum and stir again. Pour in the apple juice and gently stir. Garnish with a twist of orange peel.'],
@@ -87,7 +101,7 @@ const allCocktails = [
         id: 8,
         name: 'Prosecco Cocktail',
         primaryIngredient: 'Prosecco White Wine & Bitters',
-        image: placeholder,
+        image: proseccoCocktailSmall,
         equipment: ['A tall glass'],
         ingredients: ['1 sugar cube (or ½ teaspoon sugar)', '4 dashes of Angostura Bitters', '1 part Cognac', 'Top with Martini Prosecco'],
         recipe: ['Add the sugar, bitters and cognac to a Champagne flute. Carefully top up with Martini Prosecco.'],
@@ -97,7 +111,7 @@ const allCocktails = [
         id: 9,
         name: 'Mary Pitchfork',
         primaryIngredient: 'Rum',
-        image: placeholder,
+        image: maryPitchforkSmall,
         equipment: ['A short glass', 'Cocktail shaker'],
         ingredients: ['2 part Bacardi Carta Blanco', '1 part Maraschino liqueur', '2 parts pineapple juice', 'A slice of pineapple, to serve'],
         recipe: ['In a cocktail shaker combine the Bacardi, maraschino and pineapple juice with ice. Shake, strain into a glass and garnish with a pineapple slice.'],
@@ -107,7 +121,7 @@ const allCocktails = [
         id: 10,
         name: 'Vanilla Pear Drop',
         primaryIngredient: 'Vodka',
-        image: placeholder,
+        image: vanillaPearDrop,
         equipment: ['Short glass ', 'Muslin cloth'],
         ingredients: ['1 part Grey Goose vodka', '1 part freshly squeezed lemon juice', '1 pear, sliced', '200g Caster sugar', '½ a Vanilla pod, split'],
         recipe: ['Start by making the syrup. Poach the pear in 200ml water with the sugar and vanilla pod. Infuse for 15 minutes, strain through a muslin cloth.', 'In a cocktail shaker, combine the vodka, lemon juice and 30ml of the pear and vanilla syrup. Shake well and strain into a glass of ice.', 'Garnish with a thin slice of pear.'],
@@ -117,7 +131,7 @@ const allCocktails = [
         id: 11,
         name: 'Blood Orange Mimosa',
         primaryIngredient: 'Prosecco White Wine',
-        image: placeholder,
+        image: bloodOrangeMimosa,
         equipment: ['Short glass'],
         ingredients: ['1 part blood orange juice, chilled', '1 part Prosecco, chilled', 'Twist of blood-orange zest'],
         recipe: ['Place blood orange juice in a small tumbler. Top up with chilled Prosecco, add a twist of blood-orange zest and serve.'],
@@ -127,7 +141,7 @@ const allCocktails = [
         id: 12,
         name: 'Rossini',
         primaryIngredient: 'Prosecco White Wine',
-        image: placeholder,
+        image: rossiniSmall,
         equipment: ['Champagne flute', 'Blender'],
         ingredients: ['3 strawberries, hulled', '1 teaspoons sugar', '1 squeeze lemon juice', 'Martini Prosecco'],
         recipe: ['Blend the strawberries, sugar and lemon juice in a blender to make a syrup. Add a splash of Prosecco to a Champagne flute.', 'Pour the syrup and Prosecco into a shaker, fill with ice and stir gently', 'Strain into the glass and top up with a little more Prosecco for some fizz.'],
@@ -147,7 +161,7 @@ const allCocktails = [
         id: 14,
         name: 'Cosmopolitan',
         primaryIngredient: 'Vodka',
-        image: placeholder,
+        image: cosmopolitanSmall,
         equipment: ['A shaker or stirring glass', 'A bar spoon (or teaspoon)', 'A strainer', 'A match', 'Martini glass'],
         ingredients: ['1 ½ parts orange vodka', '½ part Cointreau liqueur', '1 part cranberry juice', '¼ part fresh lime juice', 'Cubed ice', 'To garnish: orange zest'],
         recipe: ['Chill your cocktail glass (the easiest way is to fill it with ice)', 'Put plenty of ice and all of the ingredients into your shaker or stirring glass and shake or stir vigorously for about 20 seconds', 'Strain the mix into a cocktail glass', 'Cut a piece of orange peel about the size of your thumb (be careful not to bend it). Hold the piece of orange peel between finger and thumb over the glass, and use a match to gently warm it for about 20 seconds', 'Then bend the peel so it releases oil onto the lighted match, igniting a flame that will settle on the surface of the drink'],
