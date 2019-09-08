@@ -51,6 +51,7 @@ h4 {
     width: 100%;
     max-width: 99%;
     margin: 0 auto;
+    min-height: 500px;
 }
 
 .navigation {
