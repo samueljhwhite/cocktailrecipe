@@ -135,17 +135,15 @@ button {
 
 .expandedCocktailCard {
     width: 88%;
-    background-color: #1f232d;
     display: flex;
-    /* align-content: space-around; */
-    /* align-content: space-between; */
     margin: 10px;
     flex-wrap: wrap;
+    max-width: 1800px;
+    justify-content: space-evenly;
 }
 
 .expandedCardImg {
     order: 1;
-    /* max-width: 30%; */
 }
 
 .expandedCardImg img {
