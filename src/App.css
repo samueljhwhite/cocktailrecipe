@@ -106,7 +106,7 @@ button {
 .cardArea {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: flex-start;
     align-content: space-between;
     margin: 10px;
@@ -116,7 +116,7 @@ button {
     background-color: #1f232d;
     text-align: center;
     margin: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 
 .cocktailCardContent {
