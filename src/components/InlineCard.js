@@ -1,15 +1,14 @@
 import React from 'react';
-import IngredientSpan from '../components/IngredientSpan';
 
-function InlineCard({ image, name, primaryIngredient, toggleCard, setActiveRecipe, id }) {
+function InlineCard({ image, name, setActiveRecipe, id }) {
     return (
 
         <div className='cocktailCard'>
-            <div className='cocktailCardContent'>
-            <img id={id} className='cardImg' src={image} alt={image} onClick={setActiveRecipe}/>
-                <div className='cocktailCardText'>
-                    <h3 onClick={toggleCard}>{name}</h3>
-                    <IngredientSpan primaryIngredient={primaryIngredient} />
+            <div className='cocktailCardContent' id={id} onClick={setActiveRecipe}>
+            <img className='cardImg' src={image} alt={image} id={id}/>
+                <div className='cocktailCardText' id={id}>
+                    <h3 id={id} >{name}</h3>
+                    
 
                 </div>
             </div>

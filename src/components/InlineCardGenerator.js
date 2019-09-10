@@ -9,10 +9,8 @@ function InlineCardGenerator({ cardsToDisplay, setActiveRecipe }) {
                     return (
                         <InlineCard
                             name={drink.name}
-                            method={drink.method}
                             key={drink.id}
                             id={drink.id}
-                            primaryIngredient={drink.primaryIngredient}
                             image={drink.image}
                             setActiveRecipe={setActiveRecipe}
                         />
