@@ -108,7 +108,8 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
-    align-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
     margin: 10px;
 }
 

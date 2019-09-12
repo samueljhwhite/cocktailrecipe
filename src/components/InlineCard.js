@@ -8,8 +8,6 @@ function InlineCard({ image, name, setActiveRecipe, id }) {
             <img className='cardImg' src={image} alt={image} id={id}/>
                 <div className='cocktailCardText' id={id}>
                     <h3 id={id} >{name}</h3>
-                    
-
                 </div>
             </div>
         </div>
