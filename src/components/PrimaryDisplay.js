@@ -11,6 +11,7 @@ function PrimaryDisplay(props) {
     const { searchedCocktails, displayRecipe, displayIngredient } = props; // Filter Results
     
     if (activeRecipeIDState === '' && selectedIngredientState === '') {
+        
         return (
             <div className='primaryDisplay'>
                 <Navigation 
@@ -23,7 +24,9 @@ function PrimaryDisplay(props) {
                 />
             </div>
         );
+
     } else if (selectedIngredientState !== '') {
+        
         return (
             <div className='primaryDisplay'>
                 <Navigation 
@@ -36,7 +39,9 @@ function PrimaryDisplay(props) {
                 />
             </div>
         );
+
     } else {
+        
         return (
             <div className='primaryDisplay'>
                 <Navigation 
@@ -49,6 +54,7 @@ function PrimaryDisplay(props) {
                 />
             </div>
         );
+        
     }
 
 }
