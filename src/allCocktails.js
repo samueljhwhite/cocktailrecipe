@@ -25,7 +25,7 @@ import rossiniLarge from './images/rossiniLarge.jpg';
 import americanaSmall from './images/americanaSmall.jpg';
 import americanaLarge from './images/americanaLarge.jpg'
 import cosmopolitanSmall from './images/cosmopolitanSmall.jpg';
-import cosmopolitanLarge from './images/cosmopolitanLarge.jpg';
+import cosmopolitanLarge from './images/CosmopolitanLarge.jpg';
 
 const allCocktails = [
     {
