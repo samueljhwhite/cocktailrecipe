@@ -1,5 +1,4 @@
 import React from 'react';
-
 import InlineCard from './InlineCard';
 import NoRecipes from './NoRecipes';
 
