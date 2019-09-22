@@ -1,6 +1,6 @@
 import React from 'react';
-import InlineCard from './InlineCard';
-import NoRecipes from './NoRecipes';
+import InlineCard from './InlineCard.js';
+import NoRecipes from '../containers/NoRecipes.js';
 
 function InlineCardGenerator({ cardsToDisplay, setActiveRecipe }) {
     
