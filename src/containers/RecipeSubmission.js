@@ -6,7 +6,7 @@ class RecipeSubmission extends React.Component {
         this.state = {
             cocktailName: '',
             ingredients: '',
-            method: ''
+            recipeMethod: ''
         }
     };
 
@@ -20,7 +20,7 @@ class RecipeSubmission extends React.Component {
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: this.encode({ 'form-name': 'contact', ...this.state })
+            body: this.encode({ 'form-name': 'submissionForm', ...this.state })
         })
             .then(() => alert('Success'))
             .catch(error => alert(error));
@@ -39,6 +39,7 @@ class RecipeSubmission extends React.Component {
         return (
             <div>
                 <form id='submissionForm' onSubmit={ this.submission }>
+                    <input type="hidden" name="form-name" value="submissionForm"/>
                     <p>
                         <label className='formTitle'>Cocktail Name</label>
                         <input type='text' name='cocktailName' value={ cocktailName } onChange={ this.handleChange }></input>
@@ -49,7 +50,7 @@ class RecipeSubmission extends React.Component {
                     </p>
                     <p>
                         <label className='formTitle'>Recipe / Method</label>
-                        <input type='text' name='method' value={ method } onChange={ this.handleChange }></input>
+                        <textarea name='recipeMethod' value={ method } onChange={ this.handleChange }></textarea>
                     </p>
                 </form>
                 <button type='submit' form='submissionForm'>Send</button>
@@ -60,5 +61,3 @@ class RecipeSubmission extends React.Component {
 }
 
 export default RecipeSubmission;
-
-// <input type="hidden" name="form-name" value="contact-form" /> 
