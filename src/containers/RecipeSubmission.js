@@ -17,6 +17,7 @@ class RecipeSubmission extends React.Component {
     };
 
     submission = (e) => {
+        console.log(e);
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -30,11 +31,12 @@ class RecipeSubmission extends React.Component {
 
     handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
+        console.log(e.target.name, e.target.value);
     };
 
 
     render() {
-        const { cocktailName, ingredients, method } = this.state;
+        const { cocktailName, ingredients, recipeMethod } = this.state;
 
         return (
             <div>
@@ -50,10 +52,10 @@ class RecipeSubmission extends React.Component {
                     </p>
                     <p>
                         <label className='formTitle'>Recipe / Method</label>
-                        <textarea name='recipeMethod' value={ method } onChange={ this.handleChange }></textarea>
+                        <textarea name='recipeMethod' value={ recipeMethod } onChange={ this.handleChange }></textarea>
                     </p>
+                    <button type='submit'>Send</button>
                 </form>
-                <button type='submit' form='submissionForm'>Send</button>
             </div>
         );
     }
