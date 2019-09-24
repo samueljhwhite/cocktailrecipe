@@ -38,7 +38,7 @@ class RecipeSubmission extends React.Component {
 
         return (
             <div>
-                <form id='submissionForm' onSubmit={ this.submission }>
+                <form onSubmit={ this.submission }>
                     <input type="hidden" name="form-name" value="submissionForm"/>
                     <p>
                         <label className='formTitle'>Cocktail Name</label>
