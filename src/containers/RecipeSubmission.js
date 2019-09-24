@@ -37,27 +37,28 @@ class RecipeSubmission extends React.Component {
         const { cocktailName, ingredients, method } = this.state;
 
         return (
-            <form onSubmit={ this.submission }>
-                <input type="hidden" name="form-name" value="contact-form" /> 
-                <p>
-                    <label className='formTitle'>Cocktail Name</label>
-                    <input type='text' name='cocktailName' value={ cocktailName } onChange={ this.handleChange }></input>
-                </p>
-                <p>
-                    <label className='formTitle'>Ingredients</label>
-                    <input type='text' name='ingredients' value={ ingredients } onChange={ this.handleChange }></input>
-                </p>
-                <p>
-                    <label className='formTitle'>Recipe / Method</label>
-                    <input type='text' name='method' value={ method } onChange={ this.handleChange }></input>
-                </p>
-                <p>
-                    <button type='submit'>Send</button>
-                </p>
-            </form>
+            <div>
+                <form id='submissionForm' onSubmit={ this.submission }>
+                    <p>
+                        <label className='formTitle'>Cocktail Name</label>
+                        <input type='text' name='cocktailName' value={ cocktailName } onChange={ this.handleChange }></input>
+                    </p>
+                    <p>
+                        <label className='formTitle'>Ingredients</label>
+                        <input type='text' name='ingredients' value={ ingredients } onChange={ this.handleChange }></input>
+                    </p>
+                    <p>
+                        <label className='formTitle'>Recipe / Method</label>
+                        <input type='text' name='method' value={ method } onChange={ this.handleChange }></input>
+                    </p>
+                </form>
+                <button type='submit' form='submissionForm'>Send</button>
+            </div>
         );
     }
 
 }
 
 export default RecipeSubmission;
+
+// <input type="hidden" name="form-name" value="contact-form" /> 
