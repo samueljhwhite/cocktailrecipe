@@ -20,7 +20,7 @@ class RecipeSubmission extends React.Component {
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: this.encode({ 'submission-form': 'contact', ...this.state })
+            body: this.encode({ 'form-name': 'contact', ...this.state })
         })
             .then(() => alert('Success'))
             .catch(error => alert(error));
@@ -37,7 +37,7 @@ class RecipeSubmission extends React.Component {
         const { cocktailName, ingredients, method } = this.state;
 
         return (
-            <form name='submission-form' onSubmit={ this.submission }>
+            <form netlify="true" onSubmit={ this.submission }>
                 <p>
                     <label className='formTitle'>Cocktail Name</label>
                     <input type='text' name='cocktailName' value={ cocktailName } onChange={ this.handleChange }></input>
