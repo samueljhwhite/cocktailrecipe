@@ -37,7 +37,8 @@ class RecipeSubmission extends React.Component {
         const { cocktailName, ingredients, method } = this.state;
 
         return (
-            <form netlify="true" onSubmit={ this.submission }>
+            <form onSubmit={ this.submission }>
+                <input type="hidden" name="form-name" value="contact-form" /> 
                 <p>
                     <label className='formTitle'>Cocktail Name</label>
                     <input type='text' name='cocktailName' value={ cocktailName } onChange={ this.handleChange }></input>
