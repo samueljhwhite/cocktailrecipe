@@ -1,18 +1,15 @@
 import React from 'react';
 
-import RecipeSubmission from './RecipeSubmission.js';
-import RecipeSubmissionContent from '../components/RecipeSubmissionContent.js';
+import RecipeSubmission from '../containers/RecipeSubmission.js';
+import RecipeSubmissionContent from './RecipeSubmissionContent.js';
 
-class NoRecipes extends React.Component {
-
-    render() {
+function NoRecipes() {
         return (
             <div className='noRecipe'>
                 <RecipeSubmissionContent />
                 <RecipeSubmission />
             </div>
-        )
-    }
+        );
 }
 
 export default NoRecipes;

@@ -1,9 +1,8 @@
 import React from 'react';
 import InlineCard from './InlineCard.js';
-import NoRecipes from '../containers/NoRecipes.js';
+import NoRecipes from './NoRecipes.js';
 
 function InlineCardGenerator({ cardsToDisplay, setActiveRecipe }) {
-    
     if (cardsToDisplay.length === 0) {
         return (
             <NoRecipes />
@@ -26,7 +25,7 @@ function InlineCardGenerator({ cardsToDisplay, setActiveRecipe }) {
                 }
             </div>
         );
-    }
+    };
 
 }
 

@@ -55,7 +55,7 @@ function PrimaryDisplay(props) {
             </div>
         );
         
-    }
+    };
 
 }
 

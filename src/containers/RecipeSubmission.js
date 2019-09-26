@@ -44,14 +44,17 @@ class RecipeSubmission extends React.Component {
                     <input type="hidden" name="form-name" value="submissionForm"/>
                     <p>
                         <label className='formTitle'>Cocktail Name</label>
+                        <br></br>
                         <input type='text' name='cocktailName' value={ cocktailName } onChange={ this.handleChange }></input>
                     </p>
                     <p>
                         <label className='formTitle'>Ingredients</label>
+                        <br></br>
                         <input type='text' name='ingredients' value={ ingredients } onChange={ this.handleChange }></input>
                     </p>
                     <p>
-                        <label className='formTitle'>Recipe / Method</label>
+                        <label className='formTitle'>Recipe Instructions</label>
+                        <br></br>
                         <textarea name='recipeMethod' value={ recipeMethod } onChange={ this.handleChange }></textarea>
                     </p>
                     <button type='submit'>Send</button>
